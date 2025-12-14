@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HCF / GCD Program</title>
+</head>
+<body>
+
+    <h2>HCF (GCD) of Two Numbers</h2>
+    <p id="result"></p>
+
+    <script>
+        // program to find the HCF or GCD of two integers
+
+        let hcf = 1;
+
+        // take input
+        const number1 = parseInt(prompt('Enter a first positive integer: '));
+        const number2 = parseInt(prompt('Enter a second positive integer: '));
+
+        // looping from 1 to number1 and number2
+        for (let i = 1; i <= number1 && i <= number2; i++) {
+            // check if i is factor of both numbers
+            if (number1 % i === 0 && number2 % i === 0) {
+                hcf = i;
+            }
+        }
+
+        // display result on webpage
+        document.getElementById("result").innerHTML =
+            "HCF of " + number1 + " and " + number2 + " is <b>" + hcf + "</b>";
+    </script>
+
+</body>
+</html>
